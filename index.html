@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nuestra invitación</title>
+  <meta name="description" content="Invitación de matrimonio" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="locked">
+  <section id="auth-screen" class="auth-screen" aria-label="Acceso con clave">
+    <div class="auth-card auth-card--image">
+      <p class="eyebrow">Invitación</p>
+      <img
+        class="auth-hero-image"
+        src="portada-invitacion.jpeg"
+        alt="Invitación de Christopher y Viviana"
+      />
+
+      <form id="password-form" class="password-form">
+        <label for="password-input">Clave</label>
+        <div class="password-row">
+          <input id="password-input" type="password" autocomplete="current-password" placeholder="Escribe la clave" required />
+          <button type="submit">Entrar</button>
+        </div>
+        <p id="auth-error" class="auth-error" role="alert" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <main id="site-content" class="site-content hidden">
+    <section class="hero section">
+      <div class="hero-card">
+        <p class="eyebrow">Tenemos el honor de invitarte a nuestro matrimonio</p>
+        <h1>Christopher &amp; Viviana</h1>
+        <p class="date-line">Sábado 9 de enero de 2027</p>
+        <p class="place-line">Casona Los Paltos, Paine · 19:00 hrs</p>
+        <a class="primary-button" href="#regalos">Ver lista de regalos</a>
+      </div>
+    </section>
+
+    <section class="section intro-section">
+      <div class="narrow">
+        <h2>Queremos celebrar contigo</h2>
+        <p>
+          Estamos muy felices de compartir este día con nuestras familias y amigos.
+          Aquí encontrarás la información principal de la ceremonia, celebración y regalos.
+        </p>
+      </div>
+    </section>
+
+    <section class="section info-grid" id="info">
+      <article class="info-card">
+        <h3>Fecha</h3>
+        <p>Sábado 9 de enero de 2027</p>
+      </article>
+
+      <article class="info-card">
+        <h3>Hora</h3>
+        <p>19:00 hrs</p>
+      </article>
+
+      <article class="info-card">
+        <h3>Lugar</h3>
+        <p>Casona Los Paltos<br />Paine, Chile</p>
+      </article>
+
+      <article class="info-card">
+        <h3>Dress code</h3>
+        <p>Formal / semi formal</p>
+      </article>
+    </section>
+
+    <section class="section countdown-section">
+      <div class="narrow">
+        <p class="eyebrow">Falta poco</p>
+        <div id="countdown" class="countdown">Calculando...</div>
+      </div>
+    </section>
+
+    <section class="section timeline-section">
+      <div class="narrow">
+        <h2>Programa</h2>
+        <div class="timeline">
+          <div><span>19:00</span><p>Ceremonia</p></div>
+          <div><span>20:00</span><p>Cóctel</p></div>
+          <div><span>21:00</span><p>Cena</p></div>
+          <div><span>22:30</span><p>Fiesta</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gifts-section" id="regalos">
+      <div class="narrow">
+        <p class="eyebrow">Regalos</p>
+        <h2>Tu presencia es nuestro mejor regalo</h2>
+        <p>
+          Si además quieres ayudarnos a empezar esta nueva etapa, puedes hacerlo mediante transferencia.
+        </p>
+
+        <div class="gift-layout">
+          <article class="transfer-card">
+            <h3>Datos de transferencia</h3>
+            <dl>
+              <div>
+                <dt>Nombre</dt>
+                <dd>Christopher / Viviana</dd>
+              </div>
+              <div>
+                <dt>RUT / ID</dt>
+                <dd>Completar</dd>
+              </div>
+              <div>
+                <dt>Banco</dt>
+                <dd>Completar</dd>
+              </div>
+              <div>
+                <dt>Tipo de cuenta</dt>
+                <dd>Completar</dd>
+              </div>
+              <div>
+                <dt>Número de cuenta</dt>
+                <dd>Completar</dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd>Completar</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="gift-card">
+            <h3>Ideas de regalo</h3>
+            <div class="gift-options">
+              <button type="button" data-gift="Luna de miel">Luna de miel</button>
+              <button type="button" data-gift="Cena especial">Cena especial</button>
+              <button type="button" data-gift="Hogar">Hogar</button>
+              <button type="button" data-gift="Experiencia">Experiencia</button>
+            </div>
+            <p id="gift-selected" class="gift-selected">Puedes escribir el motivo en el comentario de la transferencia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section rsvp-section" id="rsvp">
+      <div class="narrow">
+        <h2>Confirmación</h2>
+        <p>Confírmanos tu asistencia por WhatsApp.</p>
+        <a class="primary-button" href="https://wa.me/00000000000?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20matrimonio" target="_blank" rel="noopener">Confirmar asistencia</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Con cariño, Christopher &amp; Viviana</p>
+      <button id="lock-again" class="text-button" type="button">Cerrar invitación</button>
+    </footer>
+  </main>
+</body>
+</html>

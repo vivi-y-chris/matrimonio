@@ -1,0 +1,422 @@
+:root {
+  --bg: #f7f0e8;
+  --paper: #fffaf4;
+  --ink: #2f2a26;
+  --muted: #766b61;
+  --accent: #9b6f45;
+  --accent-dark: #755334;
+  --line: #e5d7c8;
+  --shadow: 0 18px 60px rgba(47, 42, 38, 0.12);
+  --radius: 26px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top, #fff8ef 0%, var(--bg) 48%, #eee0d2 100%);
+}
+
+body.locked {
+  min-height: 100vh;
+  overflow-y: auto;
+  background: #FFFCEB;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.auth-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: start center;
+  padding: 24px;
+  background: #FFFCEB;
+}
+
+.auth-card {
+  width: min(560px, 100%);
+  padding: 22px;
+  border: 1px solid #ddd8c3;
+  border-radius: var(--radius);
+  background: #FFFCEB;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.auth-card--image {
+  padding-top: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.auth-hero-image {
+  display: block;
+  width: min(360px, 92%);
+  max-height: 52vh;
+  margin: 8px auto 16px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+.auth-text {
+  margin: 0 auto 16px;
+  max-width: 500px;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  line-height: 1.45;
+}
+
+.password-form {
+  width: min(520px, 100%);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.password-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.password-row {
+  display: flex;
+  gap: 10px;
+}
+
+.password-row input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 14px 16px;
+  background: white;
+  color: var(--ink);
+  font: 1rem Arial, sans-serif;
+  outline: none;
+}
+
+.password-row input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(155, 111, 69, 0.15);
+}
+
+button,
+.primary-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 22px;
+  background: var(--accent);
+  color: white;
+  font: 700 0.95rem Arial, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+button:hover,
+.primary-button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.auth-error {
+  min-height: 1.2em;
+  margin: 12px 0 0;
+  color: #9a2f2f;
+  font: 0.9rem Arial, sans-serif;
+  text-align: center;
+}
+
+.site-content {
+  min-height: 100vh;
+}
+
+.section {
+  padding: 72px 22px;
+}
+
+.narrow {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero {
+  min-height: 92vh;
+  display: grid;
+  place-items: center;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.hero-card {
+  width: min(960px, 100%);
+  padding: clamp(34px, 6vw, 78px);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 8px);
+  background: linear-gradient(145deg, rgba(255, 250, 244, 0.95), rgba(255, 245, 232, 0.86));
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.auth-card h1,
+.hero-card h1 {
+  margin: 0;
+  font-size: clamp(3rem, 9vw, 6.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.date-line,
+.place-line {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.place-line {
+  margin-top: 8px;
+}
+
+.hero-card .primary-button {
+  margin-top: 34px;
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+}
+
+h3 {
+  margin: 0 0 12px;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+p {
+  font-family: Arial, sans-serif;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.info-grid {
+  width: min(1100px, calc(100% - 44px));
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.info-card,
+.transfer-card,
+.gift-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 250, 244, 0.86);
+  box-shadow: 0 12px 36px rgba(47, 42, 38, 0.08);
+}
+
+.info-card {
+  padding: 28px 22px;
+  text-align: center;
+}
+
+.info-card p {
+  margin: 0;
+}
+
+.countdown-section,
+.timeline-section,
+.gifts-section {
+  background: rgba(255, 250, 244, 0.45);
+}
+
+.countdown {
+  margin-top: 18px;
+  font-family: Arial, sans-serif;
+  font-size: clamp(1.4rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--accent-dark);
+}
+
+.timeline {
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.timeline div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+  text-align: left;
+}
+
+.timeline span {
+  font: 700 1rem Arial, sans-serif;
+  color: var(--accent-dark);
+}
+
+.timeline p {
+  margin: 0;
+}
+
+.gift-layout {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  text-align: left;
+}
+
+.transfer-card,
+.gift-card {
+  padding: 28px;
+}
+
+.transfer-card dl {
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.transfer-card dl div {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.transfer-card dt {
+  font: 700 0.85rem Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.transfer-card dd {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--ink);
+}
+
+.gift-options {
+  display: grid;
+  gap: 12px;
+}
+
+.gift-options button {
+  width: 100%;
+  justify-content: flex-start;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 16px 18px;
+}
+
+.gift-options button:hover,
+.gift-options button.selected {
+  color: white;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.gift-selected {
+  margin-top: 16px;
+}
+
+.rsvp-section {
+  text-align: center;
+}
+
+.footer {
+  padding: 28px 22px 48px;
+  text-align: center;
+}
+
+.text-button {
+  margin-top: 10px;
+  background: transparent;
+  color: var(--accent-dark);
+  border: 1px solid var(--line);
+}
+
+.text-button:hover {
+  background: rgba(155, 111, 69, 0.08);
+}
+
+@media (max-width: 900px) {
+  .info-grid,
+  .gift-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .auth-screen {
+    padding: 12px;
+  }
+
+  .auth-card {
+    padding: 14px;
+  }
+
+  .auth-hero-image {
+    width: min(300px, 95%);
+    max-height: 45vh;
+    margin-bottom: 12px;
+  }
+
+  .auth-text {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .password-row {
+    flex-direction: column;
+  }
+
+  .info-grid,
+  .gift-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .section {
+    padding: 52px 18px;
+  }
+}
