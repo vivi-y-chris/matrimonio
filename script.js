@@ -7,6 +7,9 @@ const RSVP_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScv2iNQlzOIfNVkT
 
 const GIFTS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxvIHU3_uW6cjDtWIwDA2lSuqUg7ggZ_21KIrgBF4iGz7I7vtVYD-WjBuSMBrx4-L10zg/exec";
 
+const GIFTS_PAGE_URL =
+  "https://milistadenovios.cl/lista/chrisyviviparasiempre";
+
 const giftForm = document.getElementById("gift-form");
 const guestName = document.getElementById("guest-name");
 const guestMessage = document.getElementById("guest-message");
@@ -256,3 +259,9 @@ giftList.addEventListener("input", (event) => {
 });
 
 renderGifts();
+
+document
+  .querySelectorAll('a[href="regalos.html"]')
+  .forEach((link) => {
+    link.href = GIFTS_PAGE_URL;
+  });
