@@ -83,4 +83,6 @@ document
   .querySelectorAll('a[href="regalos.html"]')
   .forEach((link) => {
     link.href = GIFTS_PAGE_URL;
+    link.target = "_blank";
+    link.rel = "noopener";
   });
