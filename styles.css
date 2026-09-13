@@ -764,3 +764,10 @@ button:hover,
   object-fit: contain;
   border-radius: 14px;
 }
+
+.map-note {
+  margin: 0 auto;
+  max-width: 520px;
+  text-align: center;
+  font-size: 0.95rem;
+}
